@@ -291,12 +291,37 @@ public class GUI extends JFrame implements ActionListener
 		bListado.setEnabled(true);
 	}
 	
+	/**
+	* Method to delete a Product from the Tree and from the File.
+	* @see NodoArbol
+	*/
 	public void borrarNodo()
 	{
 		int clave = Integer.parseInt(tClave.getText());
 		producto = new Producto("",clave,0);
 		
 		NodoArbol<Producto> nodo = miArbol.busca(producto); // Search for the product on the tree
+		boolean delete = false;
+		
+		if (nodo!=null) // If Node was in the tree
+			delete = miArbol.borrar(nodo.dato);
+		
+		if(delete)
+		{
+			try
+			{
+				JOptionPane.showMessageDialog(null,"El producto fue eliminado exitosamente");
+				listado();
+			}
+			catch(IOException e)
+			{
+				System.out.println("" + e);
+			}
+		}		
+		else
+		{
+			JOptionPane.showMessageDialog(null,"El producto no pudo ser eliminado");
+		}
 	}
 	
 	/**
