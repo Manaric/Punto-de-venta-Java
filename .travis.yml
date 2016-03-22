@@ -1,0 +1,6 @@
+language: java
+
+
+#test on different JDK
+jdk:
+  - oraclejdk8
