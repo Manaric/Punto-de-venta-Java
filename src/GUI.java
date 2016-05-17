@@ -17,7 +17,7 @@ import javax.imageio.ImageIO;
 * so exceptions could be thrown regullarly because of this.
 * 
 * @author Librado Jimenez
-* @author  Yamil Elías
+* @author  Yamil Elias
 * @version 1.1
 * @since   2016-02-03
 */

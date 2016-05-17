@@ -77,7 +77,7 @@ public class ABB<AnyType extends Comparable<AnyType>> // Just objects that imple
 		while (p != null)
 		{ 
 			if (p.dato.compareTo(x) == 0)
-				return  p; // si lo encontró
+				return  p; // si lo encontro
 			else if (x.compareTo(p.dato) < 0)
 				p= p.izq;
 			else 
